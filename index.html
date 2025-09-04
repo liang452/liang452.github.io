@@ -1,4 +1,33 @@
-<!doctype html>
-<div style="max-width:600px; font-family:sans-serif; background-color:blue">
-<p>Hi!</p>
-</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centered Card</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh; /* full screen height */
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+      background: #f0f0f0;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Hello!</h2>
+    <p>testing testing</p>
+  </div>
+</body>
+</html>
