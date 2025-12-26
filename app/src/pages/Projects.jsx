@@ -16,10 +16,17 @@ export default function Projects() {
         </Link>
     
       <h1>projects</h1>
-      <h4>pulsar star classification.</h4>
-      <h4>er room management.</h4>
-      <h4>lotus eater.</h4>
-      <p>Check out the VGDev site! I've worked on a bunch of games there. </p>
+      <b>this website</b>
+        <p>made with React and vite.</p>
+
+      <b>pulsar star classification.</b>
+      <p>identifying <a href="https://en.wikipedia.org/wiki/Pulsar">pulsar</a> and nonpulsar stars with both numeric and image data for cs 4641 machine learning.</p>
+
+      <b>er room management.</b>
+      <p>frontend for a mysql project from cs 4400 intro to databases</p>
+
+      <b>custom spotify wrapped</b>
+      <p>using spotify's api to create a summary of listening data</p>
     </div>
   );
 }
