@@ -1,0 +1,21 @@
+body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* horizontal center */
+      align-items: center;     /* vertical center */
+      background: #f0f0f0;
+      font-family:'Courier New', Courier, monospace;
+    }
+
+    .card {
+      width: 300px;
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .button {
+      padding:5px;
+    }
