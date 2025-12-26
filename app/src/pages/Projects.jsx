@@ -16,8 +16,8 @@ export default function Projects() {
         </Link>
     
       <h1>projects</h1>
-      <b>this website</b>
-        <p>made with React and vite.</p>
+
+    <b>secret game dev project</b>
 
       <b>pulsar star classification.</b>
       <p>identifying <a href="https://en.wikipedia.org/wiki/Pulsar">pulsar</a> and nonpulsar stars with both numeric and image data for cs 4641 machine learning.</p>
@@ -27,6 +27,9 @@ export default function Projects() {
 
       <b>custom spotify wrapped</b>
       <p>using spotify's api to create a summary of listening data</p>
+
+      <b>this website</b>
+        <p>made with React and vite, deployed using github actions.</p>
     </div>
   );
 }
