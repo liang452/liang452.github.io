@@ -17,6 +17,7 @@ export default function Projects() {
     
       <h1>projects</h1>
       <h4>pulsar star classification.</h4>
+      <h4>er room management.</h4>
       <h4>lotus eater.</h4>
       <p>Check out the VGDev site! I've worked on a bunch of games there. </p>
     </div>

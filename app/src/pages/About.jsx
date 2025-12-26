@@ -14,7 +14,7 @@ export default function About() {
         <h2>Hello!</h2>
         <p>
           I'm a programmer and artist on the side. I'm interested in data
-          science, webdev, and gamedev.
+          science, webdev, and gamedev. This site was made with React and vite.
         </p>
         <a href="https://github.com/liang452" target="_blank" rel="noopener noreferrer">
             <FontAwesomeIcon icon={faGithub} size="2x" />
