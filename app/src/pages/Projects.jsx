@@ -36,6 +36,11 @@ export default function Projects() {
         </div>
 
         <div className="boxcard">
+        <Link to="/porygon"><b>p5.js Porygon</b></Link>
+        <p>a Porygon model/animation math with Processing, and then adapted for p5.js</p>
+        </div>
+
+        <div className="boxcard">
            <a href="https://github.gatech.edu/pages/eliang39/CS-4641-Group-4-Docs/final-report">
              <b>pulsar star classification</b></a>
         <p>identifying <a href="https://en.wikipedia.org/wiki/Pulsar">pulsar</a> stars with numeric and image data with machine learning methods such as GMM, random forest, CNNs.</p>
