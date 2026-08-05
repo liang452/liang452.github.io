@@ -15,7 +15,7 @@
 
 a {
   font-weight: 500;
-  color: #287b9c;
+  color: #3b87aa;
   text-decoration: inherit;
 }
 a:hover {
@@ -23,14 +23,16 @@ a:hover {
 }
 
 body {
-  margin: 0;
+  margin: 5;
   display: flex;
+  flex-wrap: wrap;
   place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  min-height: 80vh;
   font-family:'Courier New', Courier, monospace;
   justify-content: center;
   align-items: center;
+  overflow-wrap: break-word;
+  text-align:center;
 }
 
 h1 {
@@ -57,32 +59,90 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+.card {
+    padding: 25px;
+    background: #1a1a1a;
+    border-radius: 12px;
+    text-align: left;
+    color: white;
+}
+
+.imagebox {
+  border-radius:5px;
+
+  object-fit: cover;
+  margin:15px;
+
+  outline-style:solid;
+  outline-width:thin;
+  outline-offset:5px;
+  outline-color:#196684;
+}
+
+  .boxcard{
+    width:80%;
+    height:fit-content;
+    padding: 20px;
+    margin:10px;
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    color:white;
+  }
+
+  .boxcard:hover {
+    border-color: #64d3ff;
+    background-color:#343232;
+  }
+
+  .container {
+    display:grid;
+    grid-template-columns: auto auto auto;
+    grid-auto-flow: dense
+  }
+
+  .navbar {
+    width: 300px;
+    padding: 10px;
+    margin:auto;
+    align-content: center;
+    
+  }
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
     background-color: #ffffff;
   }
+
+  a {
+  color: #5495b3;
+  }
   a:hover {
     color: #64d3ff;
   }
   button {
-    background-color: #f9f9f9;
+    background-color: #f7f3f0;
   }
-}
-
-
   .card {
-    width: 300px;
-    padding: 20px;
-    background: #1a1a1a;
+    background: #f7f3f0;
     border-radius: 12px;
-    text-align: center;
+    color: black;
+  }
+
+  .boxcard {
+    background: #f7f3f0;
+    border-radius: 8px;
+    color: black;
+  }
+
+  .boxcard:hover {
+    border-color: #64d3ff;
+    background-color:#e3dcd6;
+  }
+
 }
 
-  .navbar {
-    width: 300px;
-    padding: 5px;
-    margin:auto;
-    align-content: center;
-  }
+
+
+
 

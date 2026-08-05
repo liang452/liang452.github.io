@@ -18,8 +18,8 @@ export default function Art() {
           <FontAwesomeIcon icon={faArrowLeft} size="2x"/>
         </Link>
 
-        <h1>art</h1>
-        <h3>wip</h3>
+        <h2>art</h2>
+        <h3>page in progress</h3>
       
     </div>
   );
