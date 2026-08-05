@@ -15,7 +15,7 @@ jobs:
 
       - name: build
         run: npm run build
-        working-directory: ./app
+        working-directory: ./app/dist
         
       - name: deploy
         uses: peaceiris/actions-gh-pages@v4
