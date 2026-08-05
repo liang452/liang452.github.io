@@ -3,20 +3,14 @@ import p5 from "p5";
 
 export default function Porygon() {
     const sketchRef = useRef();
-    useEffect(() => {
 
-        const instance = new p5(sketch, sketchRef.current);
-
-        return () => instance.remove();
-
-    }, []);
-
-    function sketch(p) {
+    const sketch =(p)=> {
         let time = 0;  // keep track of the "time"
 
         p.setup = () => {
             // size (800, 800, P3D);  // use 3D here
             // noStroke(); 
+            console.log("p5 setup running");
             p.createCanvas(800, 800, p.WEBGL);
             p.noStroke();  
         }
@@ -34,7 +28,7 @@ export default function Porygon() {
             );
 
             p.camera(
-                0,0,85,
+                60, -20, 85,
                 0,0,-1,
                 0,1,0
             );
@@ -49,12 +43,14 @@ export default function Porygon() {
 
             p.translate(0,0,0);
 
-            p.rotate(
-                -time,
-                0,
-                0.1,
-                0
-            );
+            // p.rotate(
+            //     -time,
+            //     0,
+            //     0.1,
+            //     0
+            // );
+
+            drawModel(p, 0, 0, 0);
 
             p.pop();
             
@@ -93,13 +89,13 @@ export default function Porygon() {
             let z_diff=10;
             // front trapezoid
             p.fill(50, 170, 190);
-            quad(x, y, z, 10,w1, w2, h);
+            quad(p, x, y, z, 10,w1, w2, h);
             
             // lower trapezoid
             p.push()
             p.translate(0, 16, 0);
             p.scale(1, -1, 1); 
-            quad(x, y, z, 10, w1, w2, h);
+            quad(p, x, y, z, 10, w1, w2, h);
             p.pop()
             
             // right triangle
@@ -120,7 +116,7 @@ export default function Porygon() {
             
             p.push()
             p.rotateY(p.radians(90));
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x+24, y+h, z-(w2/2)+5); // back
             p.vertex(x+20, y+2*h, z-(w2/2)+5);// back 2
             p.vertex(x, y+2*h, z-(w2/2)+5);
@@ -134,7 +130,7 @@ export default function Porygon() {
             
             p.push()
             p.rotateY(p.radians(90));
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x+24, y+h, z+(w2/2)-5); // back
             p.vertex(x+20, y+2*h, z+(w2/2)-5);// back 2
             p.vertex(x, y+2*h, z+(w2/2)-5);
@@ -175,7 +171,9 @@ export default function Porygon() {
 
         function eyes(p,  x,  y,  z, right) {
             p.fill(255);
+            
             p.beginShape();
+
             p.beginShape();
             p.vertex(x, y, z-0.5);
             p.vertex(x, y-2.5, z-3.5);
@@ -193,7 +191,7 @@ export default function Porygon() {
                 new_x = x-0.1;
             }
             
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(new_x, y-3, z+0.5);
             p.vertex(new_x, y-4, z+0.5);
             p.vertex(new_x, y-4, z-0.5);
@@ -205,7 +203,7 @@ export default function Porygon() {
         }
 
         function beak(p, x,  y,  z) {
-            p.beginShape(p.QUADS);
+            p.beginShape();
             // trapezoid
             quad(p, x, y, z, 7.5, 15, 8, 7.5);
             p.endShape();
@@ -266,14 +264,14 @@ export default function Porygon() {
             let z2 = 12;
             
             // front
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x, y, z);  // top left
             p.vertex(x+7, y, z); // top right
             p.vertex(x+7, y+12, z+z1); // bottom right
             p.vertex(x, y+12, z+z1); // bottom left
             p.endShape();
             
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x, y+12, z+z1);
             p.vertex(x+7, y+12, z+z1);
             p.vertex(x+7, y+15, z+z1);
@@ -290,7 +288,7 @@ export default function Porygon() {
             p.endShape();
             
             // back slanted
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x, y+12, z-z2); // bottom
             p.vertex(x, y, z); // top
             p.vertex(x+7, y, z); // top
@@ -298,7 +296,7 @@ export default function Porygon() {
             p.endShape();
             
             // back quad
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x, y+12, z-z2);
             p.vertex(x+7, y+12, z-z2);
             p.vertex(x+7, y+15, z-z2);
@@ -306,12 +304,12 @@ export default function Porygon() {
             p.endShape();
             
             // bottom
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x, y+15, z-z2);
             p.vertex(x, y+15, z+z1);
             p.vertex(x+7, y+15, z+z1);
             p.vertex(x+7, y+15, z-z2);
-            p.endShape(p.QUADS);
+            p.endShape();
             
             // outside shape
             p.beginShape();
@@ -362,7 +360,7 @@ export default function Porygon() {
         }
 
         function quad(p, x,  y,  z,  z_diff,  w1,  w2,  h) {
-            p.beginShape(p.QUADS);
+            p.beginShape();
             p.vertex(x-w1/2, y, z);
             p.vertex(x+w1/2, y, z);
             p.vertex(x+(w2/2), y+h, z+z_diff);
@@ -370,5 +368,21 @@ export default function Porygon() {
             p.endShape();
         }
     }
+    useEffect(() => {
+         let instance;
+
+        try {
+            instance = new p5(sketch, sketchRef.current);
+        } catch (err) {
+            console.error("p5 failed:", err);
+        }
+
+        return () => {
+            if (instance) {
+                instance.remove();
+            }
+        };
+    }, []);
+
     return <div ref={sketchRef}></div>;
 }
