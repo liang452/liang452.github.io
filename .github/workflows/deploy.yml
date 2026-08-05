@@ -23,9 +23,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./app/dist
       - name: build docker image
-        run: docker build -t liang452-site .
+        run: docker build -t liang452-site ./app
 
-      - name: Test container
+      - name: test container
         run: |
           docker run -d -p 8080:80 --name test-container liang452-site
           sleep 5
