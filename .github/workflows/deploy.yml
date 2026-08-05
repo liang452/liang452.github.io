@@ -15,13 +15,13 @@ jobs:
 
       - name: build
         run: npm run build
-        working-directory: ./app/dist
+        working-directory: ./app
         
       - name: deploy
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist
+          publish_dir: ./app/dist
       - name: build docker image
         run: docker build -t liang452-site .
 
