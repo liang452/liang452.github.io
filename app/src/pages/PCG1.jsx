@@ -8,9 +8,9 @@ export default function pcg1() {
   // Define the public paths to your four core Unity build files
   const { unityProvider } = useUnityContext({
     loaderUrl: "/unity-build/webbuild.loader.js",
-    dataUrl: "/unity-build/webbuild.data.br",
-    frameworkUrl: "/unity-build/webbuild.framework.js.br",
-    codeUrl: "/unity-build/webbuild.wasm.br",
+    dataUrl: "/unity-build/webbuild.data",
+    frameworkUrl: "/unity-build/webbuild.framework.js",
+    codeUrl: "/unity-build/webbuild.wasm",
   });
 
   return (
