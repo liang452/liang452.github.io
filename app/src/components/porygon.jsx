@@ -2,7 +2,11 @@ import { useEffect, useRef } from "react";
 import p5 from "p5";
 
 export default function Porygon() {
-    const sketchRef = useRef();
+    console.log("PORYGON COMPONENT RENDER");
+
+ 
+    const sketchRef = useRef(null);
+    const p5Instance = useRef(null);
 
     const sketch =(p)=> {
         let time = 0;  // keep track of the "time"
@@ -11,7 +15,7 @@ export default function Porygon() {
             // size (800, 800, P3D);  // use 3D here
             // noStroke(); 
             console.log("p5 setup running");
-            p.createCanvas(800, 800, p.WEBGL);
+            p.createCanvas(300, 300, p.WEBGL);
             p.noStroke();  
         }
 
@@ -368,21 +372,28 @@ export default function Porygon() {
             p.endShape();
         }
     }
-    useEffect(() => {
-         let instance;
+   
 
-        try {
-            instance = new p5(sketch, sketchRef.current);
-        } catch (err) {
-            console.error("p5 failed:", err);
-        }
+    useEffect(() => {
+        console.log("P5 EFFECT START");
+
+        const instance = new p5(sketch, sketchRef.current);
+
+        console.log(
+            "CANVASES IN PORYGON CONTAINER:",
+            sketchRef.current.querySelectorAll("canvas").length
+        );
 
         return () => {
-            if (instance) {
-                instance.remove();
+            console.log("P5 EFFECT CLEANUP");
+
+            instance.remove();
+
+            if (sketchRef.current) {
+            sketchRef.current.innerHTML = "";
             }
         };
-    }, []);
+        }, []);
 
-    return <div ref={sketchRef}></div>;
+    return <div ref={sketchRef} ></div>;
 }

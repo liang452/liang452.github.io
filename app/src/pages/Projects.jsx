@@ -23,6 +23,12 @@ export default function Projects() {
             marginTop: "1.5rem",
         }}>
 
+          <div className="boxcard">
+           <Link to="/pcg">
+             <b>Procedural Content Generation Projects</b></Link>
+        <p>projects made for my Procedural Content Generation (PCG) class (CS 4488)</p>
+        </div>
+
         <div className="boxcard">
            <a href="https://github.gatech.edu/pages/eliang39/vraps">
              <b>VRAPS VR Game</b></a>
@@ -37,7 +43,7 @@ export default function Projects() {
 
         <div className="boxcard">
         <Link to="/porygon"><b>p5.js Porygon</b></Link>
-        <p>a Porygon model/animation math with Processing, and then adapted for p5.js</p>
+        <p>a Porygon model/animation made with Processing, and then adapted for p5.js</p>
         </div>
 
         <div className="boxcard">
