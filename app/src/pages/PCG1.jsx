@@ -19,7 +19,7 @@ export default function pcg1() {
           <FontAwesomeIcon icon={faArrowLeft} size="2x"/>
         </Link>
 
-    <div>A procedurally generated dungeon for a course.</div>
+
 
     <div style={{ width: "100%", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
       {/* Render the canvas object */}

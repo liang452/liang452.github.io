@@ -25,8 +25,8 @@ export default function Projects() {
 
           <div className="boxcard">
            <Link to="/pcg">
-             <b>Procedural Content Generation Projects</b></Link>
-        <p>projects made for my Procedural Content Generation (PCG) class (CS 4488)</p>
+             <b>Procedurally Generated Dungeon</b></Link>
+        <p>procedural dungeon made for a Procedural Content Generation (PCG) class (CS 4488)</p>
         </div>
 
         <div className="boxcard">
@@ -36,9 +36,9 @@ export default function Projects() {
         </div>
 
         <div className="boxcard">
-           <a href="https://github.gatech.edu/pages/eliang39/vraps">
+           <a href="https://liang452.github.io/oceantempgame/">
              <b>Ocean Explorer</b></a>
-        <p>a web game built using PixiJS to teach ocean currents and temperatures</p>
+        <p>a web game built using PixiJS to teach about ocean currents and temperatures.</p>
         </div>
 
         <div className="boxcard">
@@ -63,19 +63,13 @@ export default function Projects() {
         <p>uses spotify's (deprecated) api to create a summary of listening data</p>
         </div>
 
-        <div className="boxcard">
+        {/* <div className="boxcard">
         <a href=""><b>detecting parkinson's FoG events</b></a>
             <p>employed binary classification techniques to detect freezing of gait events in   
                 <a href=
                 "https://www.kaggle.com/competitions/tlvmc-parkinsons-freezing-gait-prediction/overview"> this</a> dataset </p>
-        </div>
-
-        <div className="boxcard">
-        <a href=""><b>terminal chatroom</b></a>
-        <p>simple chatroom made in Python that runs in terminal</p>
-        </div>
-
-        
+        </div> */}
+  
     </div>
     </div>
   );
