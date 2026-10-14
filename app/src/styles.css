@@ -50,7 +50,7 @@ button {
   background-color: #1a1a1a;
   cursor: pointer;
   transition: border-color 0.25s;
-  border-color:white;
+  border-color:grey;
 }
  button:hover{
     filter: drop-shadow(4px 5px 0px white);
@@ -75,7 +75,7 @@ button:focus-visible {
     color: white;
     outline-style:solid;
     outline-width:thin;
-    outline-color:white;
+    outline-color:grey;
 }
 
 .imagebox {
@@ -102,7 +102,7 @@ button:focus-visible {
     color:white;
     outline-style:solid;
     outline-width:thin;
-    outline-color:white;
+    outline-color:grey;
     
   }
 
@@ -125,6 +125,23 @@ button:focus-visible {
     align-content: center;
     
   }
+
+
+.ascii-container {
+  display: flex;
+  justify-content: center;
+  margin: 1.5rem 0;
+}
+
+.ascii-art {
+  font-family: "Courier New", monospace;
+  font-size: 14px;
+  line-height: 1.15;
+  white-space: pre;
+  overflow-x: auto;
+  color: #61dca3;
+}
+
 
 @media (prefers-color-scheme: light) {
   :root {
