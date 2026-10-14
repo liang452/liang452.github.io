@@ -568,7 +568,7 @@ If it declares any Font Awesome CSS pseudo-elements, they will not be rendered a
         .' (        .-' /
       _/..._'.    .'   /
   .-'\`      \`'-./  _.'
-( o)  ))        ;= <_
+( ^)  ))        ;= <_
   '-.,\\__ __.-;'\\   '.
        \\) |'\\ \\)  '.   \\
         \\_/       '-._\\
@@ -577,7 +577,7 @@ If it declares any Font Awesome CSS pseudo-elements, they will not be rendered a
       O                 .' (        .-' /
         o            _/..._'.    .'   /
                   .-'\`      \`'-./  _.'
-                ( o)  ))        ;= <_
+                ( ^)  ))        ;= <_
                   '-.,\\__ __.-;'\\   '.
                       \\) |'\\ \\)  '.   \\
                         \\_/       '-._\\
