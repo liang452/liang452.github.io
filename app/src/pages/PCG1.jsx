@@ -14,20 +14,20 @@ export default function pcg1() {
   });
 
   return (
-    <div>
+    <div style={{marginTop:"1.5rem",}}>
          <Link to="/projects" >
           <FontAwesomeIcon icon={faArrowLeft} size="2x"/>
         </Link>
 
 
-
-    <div style={{ width: "100%", height: "100vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
-      {/* Render the canvas object */}
+    
+    <div style={{ width: "100%", height: "80vh", display: "flex", justifyContent: "center", alignItems: "center" }}>
       <Unity 
         unityProvider={unityProvider} 
-        style={{ width: 800, height: 600, background: "grey" }} 
+        style={{ width: 800, height: 600, background: "black" }} 
       />
     </div>
+    <div>Note: Your browser will need to support WebGL.</div>
     </div>
   );
 }

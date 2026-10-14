@@ -20,8 +20,7 @@ export default function Home() {
           <div className="card" style={{width: "275px", textAlign:"left"}}>
               <h2>hello!</h2>
               <p>
-                i'm a programmer and artist interested in data
-                science, webdev, and gamedev.
+                programmer and artist, occasional gamedev
               </p>
               <a href="https://github.com/liang452" target="_blank" rel="noopener noreferrer">
                   <FontAwesomeIcon icon={faGithub} size="1x" />

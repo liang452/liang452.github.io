@@ -11,6 +11,7 @@ export default function About() {
         flexDirection: "column",
         alignItems: "center",
         margin: "auto",
+        marginTop:"1.5rem",
       }}>
          <Link to="/" style={{margin:"20px"}}>
             <FontAwesomeIcon icon={faArrowLeft} size="2x"/>
@@ -22,13 +23,13 @@ export default function About() {
         <h2>more about me</h2>
         
         <p>
-          I'm currently a Computer Science major at Georgia Tech with concentrations in machine learning and information management.</p>
+          I'm currently a Computer Science major at Georgia Tech with concentrations in machine learning and information management. Occasionally I dabble in graphics courses.</p>
           
-         <p> I like making software that centers on interactivity - data visualizations, game development, and websites. Currently I work with the VRAPs lab making a VR game about sustainable construction.
+         <p> I like making software that centers on interactivity - data visualizations, game development, and websites. This summer I worked with the VRAPs lab making a VR game about sustainable construction.
           Previously, I've been an Undergraduate Research Assistant at the University of Texas at Dallas under Dr. Xiwei Tang working with wearable sensor data.
         </p>
 
-        <p> In my free time, I like looking into OS and cybersecurity. Outside of computer science, I'm enjoy drawing and rock climbing. I'm also a member of GT's <a href="https://www.gtvgdev.com/">VGDev</a> club.</p>
+        <p> In my free time, I like reading about OS and cybersecurity. Outside of computer science, I'm enjoy drawing and rock climbing. I'm also a member of GT's <a href="https://www.gtvgdev.com/">VGDev</a> club.</p>
         </div>
       </div>
   

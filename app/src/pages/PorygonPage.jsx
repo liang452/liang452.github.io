@@ -12,6 +12,7 @@ export default function PorygonPage() {
         flexDirection: "column",
         alignItems: "center",
         margin: "auto",
+        marginTop:"1.5rem",
       }}>
         <Link to="/projects" >
           <FontAwesomeIcon icon={faArrowLeft} size="2x"/>

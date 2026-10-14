@@ -10,17 +10,19 @@ export default function Projects() {
         flexDirection: "column",
         alignItems: "center",
         margin: "auto",
+        marginTop:"1.5rem",
       }}>
-        <Link to="/" >
-          <FontAwesomeIcon icon={faArrowLeft} size="2x"/>
-        </Link>
     
-      <h2>projects</h2>
+    <div>
+      <Link to="/" ><FontAwesomeIcon icon={faArrowLeft} size="2x"/></Link>
+          {/* <h2> projects </h2> */}
+             </div>
+      
       <div style={{
             display: "grid",
             gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr)",
-            maxWidth: "88%",
-            marginTop: "1.5rem",
+            maxWidth: "80%",
+            marginTop: "1rem",
         }}>
 
           <div className="boxcard">
@@ -54,13 +56,13 @@ export default function Projects() {
         
         <div className="boxcard">
         <a href=""><b>er room management site</b></a>
-        <p>fullstack web application for a simulated ER management mySQL project </p>
+        <p>fullstack web application using Next.js for a simulated ER management mySQL project </p>
         </div>
 
         <div className="boxcard">
         <a href="https://github.com/liang452/custom-spotify-wrapped">
         <b>custom spotify wrapped</b></a>
-        <p>uses spotify's (deprecated) api to create a summary of listening data</p>
+        <p>a web app built with Django that uses spotify's (deprecated) api to create a summary of listening data</p>
         </div>
 
         {/* <div className="boxcard">
