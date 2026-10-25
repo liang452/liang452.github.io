@@ -100,12 +100,23 @@ export class TypeShuffle {
 constructor(DOM_el) {
     this.DOM.el = DOM_el;
 
-    // Preserve the original ASCII art exactly.
     const text = DOM_el.textContent
         .replace(/^\n/, "")
         .replace(/\n\s*$/, "");
 
-    const lines = text.split("\n");
+    //const lines = text.split("\n");
+    // this makes grid rectangular / pads rows until theyre all equal length
+   
+    const inputLines = text.split("\n").map(line => [...line]);
+    this.gridSize = Math.max(
+        1,
+        ...inputLines.map(line => line.length)
+    );
+
+    const lines = inputLines.map(line => [
+        ...line,
+        ...Array(this.gridSize - line.length).fill(" ")
+    ]);
 
     DOM_el.innerHTML = "";
     DOM_el.style.whiteSpace = "pre";
@@ -123,8 +134,7 @@ constructor(DOM_el) {
             const charEl = document.createElement("span");
             charEl.className = "char";
 
-            // Use a non-breaking space so spaces remain visible
-            // in the layout and survive DOM manipulation.
+
             charEl.innerHTML = char === " " ? "&nbsp;" : char;
 
             lineEl.appendChild(charEl);

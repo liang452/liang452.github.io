@@ -15,9 +15,9 @@ export default function pcg1() {
 
   return (
     <div style={{marginTop:"1.5rem",}}>
-         <Link to="/projects" >
+         {/* <Link to="/projects" >
           <FontAwesomeIcon icon={faArrowLeft} size="2x"/>
-        </Link>
+        </Link> */}
 
 
     
